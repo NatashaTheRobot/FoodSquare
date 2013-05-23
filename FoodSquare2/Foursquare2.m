@@ -374,6 +374,24 @@ static NSMutableDictionary *attributes;
 	[self get:@"venues/search" withParams:dic callback:callback];
 }
 
++(void)getPhotosForVenue:(NSString *)venueId
+                   limit:(NSNumber *)limit
+                  offset:(NSNumber *)offset
+                callback:(Foursquare2Callback)callback
+{
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    if (limit) {
+        dic[@"limit"] = limit.stringValue;
+    }
+    if (offset) {
+        dic[@"offset"] = offset.stringValue;
+    }
+    NSString *path = [NSString stringWithFormat:@"venues/%@/photos", venueId];
+	[self get:path withParams:dic callback:callback];
+}
+
+
+
 +(void)searchVenuesInBoundingQuadrangleS:(NSNumber*)s
                                        w:(NSNumber*)w
                                        n:(NSNumber*)n

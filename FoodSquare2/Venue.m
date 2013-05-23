@@ -10,4 +10,15 @@
 
 @implementation Venue
 
+- (id)init
+{
+    self = [super init];
+    
+    if (self) {
+        self.image = [UIImage imageNamed:@"foursquare-logo.jpg"];
+    }
+    
+    return self;
+}
+
 @end

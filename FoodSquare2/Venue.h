@@ -11,7 +11,7 @@
 @interface Venue : NSObject
 
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *numberOfPeopleHereNow;
+@property (assign, nonatomic) NSInteger numberOfPeopleHereNow;
 @property (strong, nonatomic) NSString *address;
 @property (strong, nonatomic) NSString *city;
 @property (strong, nonatomic) NSString *state;
@@ -23,5 +23,6 @@
 @property (assign, nonatomic) NSInteger checkInCount;
 @property (assign, nonatomic) NSInteger usersCount;
 @property (strong, nonatomic) NSString *foursquareId;
+@property (strong, nonatomic) UIImage *image;
 
 @end

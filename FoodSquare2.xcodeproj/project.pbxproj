@@ -28,6 +28,9 @@
 		9C9BA5E9174D69E100A300B8 /* poweredByFoursquare_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9BA5E0174D69E100A300B8 /* poweredByFoursquare_gray@2x.png */; };
 		9C9BA5EE174D6B1000A300B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BA5ED174D6B1000A300B8 /* ViewController.m */; };
 		9C9BA5F1174D938900A300B8 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BA5F0174D938900A300B8 /* Venue.m */; };
+		9C9BA5F3174D9CBA00A300B8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9BA5F2174D9CBA00A300B8 /* MapKit.framework */; };
+		9C9BA5F5174D9CC200A300B8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9BA5F4174D9CC200A300B8 /* CoreLocation.framework */; };
+		9CE5E80D174E4156004D25A8 /* foursquare-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5E80C174E4156004D25A8 /* foursquare-logo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		9C9BA5ED174D6B1000A300B8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9C9BA5EF174D938800A300B8 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
 		9C9BA5F0174D938900A300B8 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		9C9BA5F2174D9CBA00A300B8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9C9BA5F4174D9CC200A300B8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9CE5E80C174E4156004D25A8 /* foursquare-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "foursquare-logo.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C9BA5F5174D9CC200A300B8 /* CoreLocation.framework in Frameworks */,
+				9C9BA5F3174D9CBA00A300B8 /* MapKit.framework in Frameworks */,
 				9C9BA5B2174D695200A300B8 /* UIKit.framework in Frameworks */,
 				9C9BA5B4174D695200A300B8 /* Foundation.framework in Frameworks */,
 				9C9BA5B6174D695200A300B8 /* CoreGraphics.framework in Frameworks */,
@@ -98,6 +106,8 @@
 		9C9BA5B0174D695200A300B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C9BA5F4174D9CC200A300B8 /* CoreLocation.framework */,
+				9C9BA5F2174D9CBA00A300B8 /* MapKit.framework */,
 				9C9BA5B1174D695200A300B8 /* UIKit.framework */,
 				9C9BA5B3174D695200A300B8 /* Foundation.framework */,
 				9C9BA5B5174D695200A300B8 /* CoreGraphics.framework */,
@@ -115,6 +125,7 @@
 				9C9BA5ED174D6B1000A300B8 /* ViewController.m */,
 				9C9BA5EF174D938800A300B8 /* Venue.h */,
 				9C9BA5F0174D938900A300B8 /* Venue.m */,
+				9CE5E80C174E4156004D25A8 /* foursquare-logo.jpg */,
 				9C9BA5EB174D6A1000A300B8 /* Foursquare2 */,
 				9C9BA5B8174D695200A300B8 /* Supporting Files */,
 			);
@@ -216,6 +227,7 @@
 				9C9BA5E7174D69E100A300B8 /* pin@2x.png in Resources */,
 				9C9BA5E8174D69E100A300B8 /* poweredByFoursquare_gray.png in Resources */,
 				9C9BA5E9174D69E100A300B8 /* poweredByFoursquare_gray@2x.png in Resources */,
+				9CE5E80D174E4156004D25A8 /* foursquare-logo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +394,7 @@
 				9C9BA5D3174D695200A300B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

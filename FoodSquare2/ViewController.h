@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface ViewController : UITableViewController
+@interface ViewController : UITableViewController <CLLocationManagerDelegate>
 
 @end
