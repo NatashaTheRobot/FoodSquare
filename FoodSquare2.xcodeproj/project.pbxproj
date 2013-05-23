@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C9BA5B2174D695200A300B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9BA5B1174D695200A300B8 /* UIKit.framework */; };
+		9C9BA5B4174D695200A300B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9BA5B3174D695200A300B8 /* Foundation.framework */; };
+		9C9BA5B6174D695200A300B8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9BA5B5174D695200A300B8 /* CoreGraphics.framework */; };
+		9C9BA5BC174D695200A300B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C9BA5BA174D695200A300B8 /* InfoPlist.strings */; };
+		9C9BA5BE174D695200A300B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BA5BD174D695200A300B8 /* main.m */; };
+		9C9BA5C2174D695200A300B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BA5C1174D695200A300B8 /* AppDelegate.m */; };
+		9C9BA5C4174D695200A300B8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9BA5C3174D695200A300B8 /* Default.png */; };
+		9C9BA5C6174D695200A300B8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9BA5C5174D695200A300B8 /* Default@2x.png */; };
+		9C9BA5C8174D695200A300B8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9BA5C7174D695200A300B8 /* Default-568h@2x.png */; };
+		9C9BA5CB174D695200A300B8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C9BA5C9174D695200A300B8 /* MainStoryboard.storyboard */; };
+		9C9BA5E1174D69E100A300B8 /* Foursquare2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BA5D5174D69E100A300B8 /* Foursquare2.m */; };
+		9C9BA5E2174D69E100A300B8 /* FSRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BA5D7174D69E100A300B8 /* FSRequester.m */; };
+		9C9BA5E3174D69E100A300B8 /* FSTargetCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BA5D9174D69E100A300B8 /* FSTargetCallback.m */; };
+		9C9BA5E4174D69E100A300B8 /* FSWebLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BA5DB174D69E100A300B8 /* FSWebLogin.m */; };
+		9C9BA5E5174D69E100A300B8 /* FSWebLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C9BA5DC174D69E100A300B8 /* FSWebLogin.xib */; };
+		9C9BA5E6174D69E100A300B8 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9BA5DD174D69E100A300B8 /* pin.png */; };
+		9C9BA5E7174D69E100A300B8 /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9BA5DE174D69E100A300B8 /* pin@2x.png */; };
+		9C9BA5E8174D69E100A300B8 /* poweredByFoursquare_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9BA5DF174D69E100A300B8 /* poweredByFoursquare_gray.png */; };
+		9C9BA5E9174D69E100A300B8 /* poweredByFoursquare_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9BA5E0174D69E100A300B8 /* poweredByFoursquare_gray@2x.png */; };
+		9C9BA5EE174D6B1000A300B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BA5ED174D6B1000A300B8 /* ViewController.m */; };
+		9C9BA5F1174D938900A300B8 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BA5F0174D938900A300B8 /* Venue.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9C9BA5AE174D695200A300B8 /* FoodSquare2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodSquare2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C9BA5B1174D695200A300B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9C9BA5B3174D695200A300B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9C9BA5B5174D695200A300B8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9C9BA5B9174D695200A300B8 /* FoodSquare2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FoodSquare2-Info.plist"; sourceTree = "<group>"; };
+		9C9BA5BB174D695200A300B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C9BA5BD174D695200A300B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C9BA5BF174D695200A300B8 /* FoodSquare2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodSquare2-Prefix.pch"; sourceTree = "<group>"; };
+		9C9BA5C0174D695200A300B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9C9BA5C1174D695200A300B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C9BA5C3174D695200A300B8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9C9BA5C5174D695200A300B8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9C9BA5C7174D695200A300B8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9C9BA5CA174D695200A300B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9C9BA5D4174D69E100A300B8 /* Foursquare2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foursquare2.h; sourceTree = "<group>"; };
+		9C9BA5D5174D69E100A300B8 /* Foursquare2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foursquare2.m; sourceTree = "<group>"; };
+		9C9BA5D6174D69E100A300B8 /* FSRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRequester.h; sourceTree = "<group>"; };
+		9C9BA5D7174D69E100A300B8 /* FSRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRequester.m; sourceTree = "<group>"; };
+		9C9BA5D8174D69E100A300B8 /* FSTargetCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTargetCallback.h; sourceTree = "<group>"; };
+		9C9BA5D9174D69E100A300B8 /* FSTargetCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTargetCallback.m; sourceTree = "<group>"; };
+		9C9BA5DA174D69E100A300B8 /* FSWebLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSWebLogin.h; sourceTree = "<group>"; };
+		9C9BA5DB174D69E100A300B8 /* FSWebLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSWebLogin.m; sourceTree = "<group>"; };
+		9C9BA5DC174D69E100A300B8 /* FSWebLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSWebLogin.xib; sourceTree = "<group>"; };
+		9C9BA5DD174D69E100A300B8 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		9C9BA5DE174D69E100A300B8 /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin@2x.png"; sourceTree = "<group>"; };
+		9C9BA5DF174D69E100A300B8 /* poweredByFoursquare_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poweredByFoursquare_gray.png; sourceTree = "<group>"; };
+		9C9BA5E0174D69E100A300B8 /* poweredByFoursquare_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poweredByFoursquare_gray@2x.png"; sourceTree = "<group>"; };
+		9C9BA5EC174D6B1000A300B8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9C9BA5ED174D6B1000A300B8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9C9BA5EF174D938800A300B8 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		9C9BA5F0174D938900A300B8 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C9BA5AB174D695200A300B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C9BA5B2174D695200A300B8 /* UIKit.framework in Frameworks */,
+				9C9BA5B4174D695200A300B8 /* Foundation.framework in Frameworks */,
+				9C9BA5B6174D695200A300B8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C9BA5A5174D695200A300B8 = {
+			isa = PBXGroup;
+			children = (
+				9C9BA5B7174D695200A300B8 /* FoodSquare2 */,
+				9C9BA5B0174D695200A300B8 /* Frameworks */,
+				9C9BA5AF174D695200A300B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C9BA5AF174D695200A300B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C9BA5AE174D695200A300B8 /* FoodSquare2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C9BA5B0174D695200A300B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C9BA5B1174D695200A300B8 /* UIKit.framework */,
+				9C9BA5B3174D695200A300B8 /* Foundation.framework */,
+				9C9BA5B5174D695200A300B8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C9BA5B7174D695200A300B8 /* FoodSquare2 */ = {
+			isa = PBXGroup;
+			children = (
+				9C9BA5C0174D695200A300B8 /* AppDelegate.h */,
+				9C9BA5C1174D695200A300B8 /* AppDelegate.m */,
+				9C9BA5C9174D695200A300B8 /* MainStoryboard.storyboard */,
+				9C9BA5EC174D6B1000A300B8 /* ViewController.h */,
+				9C9BA5ED174D6B1000A300B8 /* ViewController.m */,
+				9C9BA5EF174D938800A300B8 /* Venue.h */,
+				9C9BA5F0174D938900A300B8 /* Venue.m */,
+				9C9BA5EB174D6A1000A300B8 /* Foursquare2 */,
+				9C9BA5B8174D695200A300B8 /* Supporting Files */,
+			);
+			path = FoodSquare2;
+			sourceTree = "<group>";
+		};
+		9C9BA5B8174D695200A300B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C9BA5B9174D695200A300B8 /* FoodSquare2-Info.plist */,
+				9C9BA5BA174D695200A300B8 /* InfoPlist.strings */,
+				9C9BA5BD174D695200A300B8 /* main.m */,
+				9C9BA5BF174D695200A300B8 /* FoodSquare2-Prefix.pch */,
+				9C9BA5C3174D695200A300B8 /* Default.png */,
+				9C9BA5C5174D695200A300B8 /* Default@2x.png */,
+				9C9BA5C7174D695200A300B8 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C9BA5EB174D6A1000A300B8 /* Foursquare2 */ = {
+			isa = PBXGroup;
+			children = (
+				9C9BA5D4174D69E100A300B8 /* Foursquare2.h */,
+				9C9BA5D5174D69E100A300B8 /* Foursquare2.m */,
+				9C9BA5D6174D69E100A300B8 /* FSRequester.h */,
+				9C9BA5D7174D69E100A300B8 /* FSRequester.m */,
+				9C9BA5D8174D69E100A300B8 /* FSTargetCallback.h */,
+				9C9BA5D9174D69E100A300B8 /* FSTargetCallback.m */,
+				9C9BA5DA174D69E100A300B8 /* FSWebLogin.h */,
+				9C9BA5DB174D69E100A300B8 /* FSWebLogin.m */,
+				9C9BA5DC174D69E100A300B8 /* FSWebLogin.xib */,
+				9C9BA5DD174D69E100A300B8 /* pin.png */,
+				9C9BA5DE174D69E100A300B8 /* pin@2x.png */,
+				9C9BA5DF174D69E100A300B8 /* poweredByFoursquare_gray.png */,
+				9C9BA5E0174D69E100A300B8 /* poweredByFoursquare_gray@2x.png */,
+			);
+			name = Foursquare2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C9BA5AD174D695200A300B8 /* FoodSquare2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C9BA5D1174D695200A300B8 /* Build configuration list for PBXNativeTarget "FoodSquare2" */;
+			buildPhases = (
+				9C9BA5AA174D695200A300B8 /* Sources */,
+				9C9BA5AB174D695200A300B8 /* Frameworks */,
+				9C9BA5AC174D695200A300B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoodSquare2;
+			productName = FoodSquare2;
+			productReference = 9C9BA5AE174D695200A300B8 /* FoodSquare2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C9BA5A6174D695200A300B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Natasha Murashev";
+			};
+			buildConfigurationList = 9C9BA5A9174D695200A300B8 /* Build configuration list for PBXProject "FoodSquare2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9C9BA5A5174D695200A300B8;
+			productRefGroup = 9C9BA5AF174D695200A300B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C9BA5AD174D695200A300B8 /* FoodSquare2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C9BA5AC174D695200A300B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C9BA5BC174D695200A300B8 /* InfoPlist.strings in Resources */,
+				9C9BA5C4174D695200A300B8 /* Default.png in Resources */,
+				9C9BA5C6174D695200A300B8 /* Default@2x.png in Resources */,
+				9C9BA5C8174D695200A300B8 /* Default-568h@2x.png in Resources */,
+				9C9BA5CB174D695200A300B8 /* MainStoryboard.storyboard in Resources */,
+				9C9BA5E5174D69E100A300B8 /* FSWebLogin.xib in Resources */,
+				9C9BA5E6174D69E100A300B8 /* pin.png in Resources */,
+				9C9BA5E7174D69E100A300B8 /* pin@2x.png in Resources */,
+				9C9BA5E8174D69E100A300B8 /* poweredByFoursquare_gray.png in Resources */,
+				9C9BA5E9174D69E100A300B8 /* poweredByFoursquare_gray@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C9BA5AA174D695200A300B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C9BA5BE174D695200A300B8 /* main.m in Sources */,
+				9C9BA5C2174D695200A300B8 /* AppDelegate.m in Sources */,
+				9C9BA5E1174D69E100A300B8 /* Foursquare2.m in Sources */,
+				9C9BA5E2174D69E100A300B8 /* FSRequester.m in Sources */,
+				9C9BA5E3174D69E100A300B8 /* FSTargetCallback.m in Sources */,
+				9C9BA5E4174D69E100A300B8 /* FSWebLogin.m in Sources */,
+				9C9BA5EE174D6B1000A300B8 /* ViewController.m in Sources */,
+				9C9BA5F1174D938900A300B8 /* Venue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C9BA5BA174D695200A300B8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C9BA5BB174D695200A300B8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C9BA5C9174D695200A300B8 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C9BA5CA174D695200A300B8 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C9BA5CF174D695200A300B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9C9BA5D0174D695200A300B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C9BA5D2174D695200A300B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FOURSQUARE_API_VERSION = 20130117;
+				FOURSQUARE_BASE_URL = "https://api.foursquare.com/v2/";
+				FOURSQUARE_CLIENT_ID = XS2ERDJJFJ2SHE0STND3SZ0RQJRIHXDFZWJPBPMPYMLQXUDN;
+				FOURSQUARE_CLIENT_SECRET = XMUPOK2CLTAETJ0BSLFPYP2MLBRQYCJK5WVRQOMP3YMKHKGE;
+				FOURSQUARE_REDIRECT_URL = "app://foodsquare";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FoodSquare2/FoodSquare2-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"FOURSQUARE_CLIENT_SECRET=@\\\"$(FOURSQUARE_CLIENT_SECRET)\\\"",
+					"FOURSQUARE_CLIENT_ID=@\\\"$(FOURSQUARE_CLIENT_ID)\\\"",
+					"FOURSQUARE_REDIRECT_URL=@\\\"$(FOURSQUARE_REDIRECT_URL)\\\"",
+					"FOURSQUARE_API_VERSION=@\\\"$(FOURSQUARE_API_VERSION)\\\"",
+					"FOURSQUARE_BASE_URL=@\\\"$(FOURSQUARE_BASE_URL)\\\"",
+				);
+				INFOPLIST_FILE = "FoodSquare2/FoodSquare2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9C9BA5D3174D695200A300B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FOURSQUARE_API_VERSION = 20130117;
+				FOURSQUARE_BASE_URL = "https://api.foursquare.com/v2/";
+				FOURSQUARE_CLIENT_ID = XS2ERDJJFJ2SHE0STND3SZ0RQJRIHXDFZWJPBPMPYMLQXUDN;
+				FOURSQUARE_CLIENT_SECRET = XMUPOK2CLTAETJ0BSLFPYP2MLBRQYCJK5WVRQOMP3YMKHKGE;
+				FOURSQUARE_REDIRECT_URL = "app://foodsquare";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FoodSquare2/FoodSquare2-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"FOURSQUARE_CLIENT_SECRET=@\\\"$(FOURSQUARE_CLIENT_SECRET)\\\"",
+					"FOURSQUARE_CLIENT_ID=@\\\"$(FOURSQUARE_CLIENT_ID)\\\"",
+					"FOURSQUARE_API_VERSION=@\\\"$(FOURSQUARE_API_VERSION)\\\"",
+					"FOURSQUARE_REDIRECT_URL=@\\\"$(FOURSQUARE_REDIRECT_URL)\\\"",
+					"FOURSQUARE_BASE_URL=@\\\"$(FOURSQUARE_BASE_URL)\\\"",
+				);
+				INFOPLIST_FILE = "FoodSquare2/FoodSquare2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C9BA5A9174D695200A300B8 /* Build configuration list for PBXProject "FoodSquare2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9BA5CF174D695200A300B8 /* Debug */,
+				9C9BA5D0174D695200A300B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C9BA5D1174D695200A300B8 /* Build configuration list for PBXNativeTarget "FoodSquare2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9BA5D2174D695200A300B8 /* Debug */,
+				9C9BA5D3174D695200A300B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C9BA5A6174D695200A300B8 /* Project object */;
+}
