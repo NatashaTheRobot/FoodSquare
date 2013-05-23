@@ -1,22 +1,21 @@
 //
-//  ViewController.m
+//  VenueMapViewController.m
 //  FoodSquare2
 //
 //  Created by Natasha Murashev on 5/23/13.
 //  Copyright (c) 2013 Natasha Murashev. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "VenueMapViewController.h"
 
-@interface ViewController ()
+@interface VenueMapViewController ()
 {
-    __weak IBOutlet UIView *__venueListContainer;
-    __weak IBOutlet UIView *__mapViewContainer;
-    
+    __weak IBOutlet MKMapView *__mapView;
+    __weak IBOutlet UIActivityIndicatorView *__activityIndicator;
 }
 @end
 
-@implementation ViewController
+@implementation VenueMapViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

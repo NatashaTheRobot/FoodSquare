@@ -34,6 +34,7 @@
 		9CE5E80F174E47C0004D25A8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE5E80E174E47C0004D25A8 /* QuartzCore.framework */; };
 		9CE5E812174E4B78004D25A8 /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E811174E4B78004D25A8 /* VenueViewController.m */; };
 		9CE5E818174E6268004D25A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E817174E6268004D25A8 /* ViewController.m */; };
+		9CE5E81B174E7466004D25A8 /* VenueMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E81A174E7466004D25A8 /* VenueMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,8 @@
 		9CE5E811174E4B78004D25A8 /* VenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueViewController.m; sourceTree = "<group>"; };
 		9CE5E816174E6268004D25A8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9CE5E817174E6268004D25A8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9CE5E819174E7466004D25A8 /* VenueMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueMapViewController.h; sourceTree = "<group>"; };
+		9CE5E81A174E7466004D25A8 /* VenueMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 				9CE5E817174E6268004D25A8 /* ViewController.m */,
 				9C9BA5EC174D6B1000A300B8 /* VenuesListViewController.h */,
 				9C9BA5ED174D6B1000A300B8 /* VenuesListViewController.m */,
+				9CE5E819174E7466004D25A8 /* VenueMapViewController.h */,
+				9CE5E81A174E7466004D25A8 /* VenueMapViewController.m */,
 				9CE5E810174E4B78004D25A8 /* VenueViewController.h */,
 				9CE5E811174E4B78004D25A8 /* VenueViewController.m */,
 				9C9BA5EF174D938800A300B8 /* Venue.h */,
@@ -262,6 +267,7 @@
 				9C9BA5F1174D938900A300B8 /* Venue.m in Sources */,
 				9CE5E812174E4B78004D25A8 /* VenueViewController.m in Sources */,
 				9CE5E818174E6268004D25A8 /* ViewController.m in Sources */,
+				9CE5E81B174E7466004D25A8 /* VenueMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

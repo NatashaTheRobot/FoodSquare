@@ -27,6 +27,12 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjj-AJ-eah">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="zAe-2M-kVf" kind="embed" id="W2h-UE-CMy"/>
+                                </connections>
+                            </containerView>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fuj-fb-Pv8">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -39,10 +45,20 @@
                             <constraint firstItem="Fuj-fb-Pv8" firstAttribute="bottom" secondItem="tR3-MT-mas" secondAttribute="bottom" type="default" id="DT7-ov-YeY"/>
                             <constraint firstItem="Fuj-fb-Pv8" firstAttribute="trailing" secondItem="tR3-MT-mas" secondAttribute="trailing" type="default" id="LaO-qL-h8S"/>
                             <constraint firstItem="Fuj-fb-Pv8" firstAttribute="leading" secondItem="tR3-MT-mas" secondAttribute="leading" type="default" id="Pbz-jS-uk7"/>
+                            <constraint firstItem="Qjj-AJ-eah" firstAttribute="bottom" secondItem="tR3-MT-mas" secondAttribute="bottom" type="default" id="Qb7-nT-tcZ"/>
+                            <constraint firstItem="Qjj-AJ-eah" firstAttribute="top" secondItem="tR3-MT-mas" secondAttribute="top" type="default" id="a0v-co-Uez"/>
                             <constraint firstItem="Fuj-fb-Pv8" firstAttribute="top" secondItem="tR3-MT-mas" secondAttribute="top" type="default" id="dLP-sx-SP9"/>
+                            <constraint firstItem="Qjj-AJ-eah" firstAttribute="trailing" secondItem="tR3-MT-mas" secondAttribute="trailing" type="default" id="nHx-Bh-eJI"/>
+                            <constraint firstItem="Qjj-AJ-eah" firstAttribute="leading" secondItem="tR3-MT-mas" secondAttribute="leading" type="default" id="wjJ-A7-AKf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="FoodSquare" id="co3-I2-QAk"/>
+                    <navigationItem key="navigationItem" title="FoodSquare" id="co3-I2-QAk">
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="pZI-rA-Dp9"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="__mapViewContainer" destination="Qjj-AJ-eah" id="l8S-RW-ODj"/>
+                        <outlet property="__venueListContainer" destination="Fuj-fb-Pv8" id="oss-kz-gTq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q9z-yv-Jc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,7 +194,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XJa-wY-bhA" firstAttribute="top" secondItem="B5b-Sj-TIO" secondAttribute="top" type="default" id="7Wn-mI-pbS"/>
+                            <constraint firstItem="XJa-wY-bhA" firstAttribute="top" secondItem="B5b-Sj-TIO" secondAttribute="top" type="default" id="7OY-Ko-Buz"/>
                             <constraint firstItem="XJa-wY-bhA" firstAttribute="leading" secondItem="B5b-Sj-TIO" secondAttribute="leading" type="default" id="DfX-5h-4Nn"/>
                             <constraint firstItem="XJa-wY-bhA" firstAttribute="trailing" secondItem="B5b-Sj-TIO" secondAttribute="trailing" type="default" id="elV-fK-FB9"/>
                             <constraint firstItem="XJa-wY-bhA" firstAttribute="bottom" secondItem="B5b-Sj-TIO" secondAttribute="bottom" type="default" id="zqv-YX-zIi"/>
@@ -193,7 +209,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Hl-ql-t54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30" y="324"/>
+            <point key="canvasLocation" x="23" y="-474"/>
+        </scene>
+        <!--Venue Map View Controller-->
+        <scene sceneID="Yvi-nD-doS">
+            <objects>
+                <viewController id="zAe-2M-kVf" customClass="VenueMapViewController" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="b9M-KM-rEm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Dw2-lV-PPH">
+                                <connections>
+                                    <outlet property="delegate" destination="zAe-2M-kVf" id="zw2-Hd-c78"/>
+                                </connections>
+                            </mapView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="o0E-aU-Ief"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dw2-lV-PPH" firstAttribute="leading" secondItem="b9M-KM-rEm" secondAttribute="leading" type="default" id="1na-ir-iBZ"/>
+                            <constraint firstItem="o0E-aU-Ief" firstAttribute="leading" secondItem="b9M-KM-rEm" secondAttribute="leading" constant="145" id="3Cy-bs-ew6"/>
+                            <constraint firstItem="Dw2-lV-PPH" firstAttribute="trailing" secondItem="b9M-KM-rEm" secondAttribute="trailing" type="default" id="PwY-Qd-yXs"/>
+                            <constraint firstItem="Dw2-lV-PPH" firstAttribute="bottom" secondItem="b9M-KM-rEm" secondAttribute="bottom" type="default" id="qXy-YF-2hm"/>
+                            <constraint firstItem="o0E-aU-Ief" firstAttribute="centerY" secondItem="Dw2-lV-PPH" secondAttribute="centerY" type="default" id="uDW-Dv-7Qv"/>
+                            <constraint firstItem="Dw2-lV-PPH" firstAttribute="top" secondItem="b9M-KM-rEm" secondAttribute="top" type="default" id="wFs-M2-EkT"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="__activityIndicator" destination="o0E-aU-Ief" id="Huf-yP-jc3"/>
+                        <outlet property="__mapView" destination="Dw2-lV-PPH" id="X5Q-nq-gZd"/>
+                        <segue destination="OMS-lf-3lO" kind="push" identifier="mapToVenue" id="kpI-0j-xEc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsa-Jp-zrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40" y="252"/>
         </scene>
     </scenes>
     <resources>
@@ -202,6 +254,13 @@
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="VenueMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VenueMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="__activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="__mapView" candidateClass="MKMapView"/>
+            </relationships>
         </class>
         <class className="VenueViewController" superclassName="VenuesListViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VenueViewController.h"/>
@@ -222,6 +281,10 @@
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="__mapViewContainer" candidateClass="UIView"/>
+                <relationship kind="outlet" name="__venueListContainer" candidateClass="UIView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -229,4 +292,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="wSP-oK-Dgw"/>
+    </inferredMetricsTieBreakers>
 </document>

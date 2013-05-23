@@ -46,11 +46,6 @@
     [_locationMananger startUpdatingLocation];
 }
 
-//- (void)viewDidAppear:(BOOL)animated
-//{
-//    [_locationMananger startUpdatingLocation];
-//}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
