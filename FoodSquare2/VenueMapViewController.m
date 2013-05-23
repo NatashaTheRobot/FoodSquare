@@ -11,7 +11,6 @@
 @interface VenueMapViewController ()
 {
     __weak IBOutlet MKMapView *__mapView;
-    __weak IBOutlet UIActivityIndicatorView *__activityIndicator;
 }
 @end
 

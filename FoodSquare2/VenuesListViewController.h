@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
 
-@interface VenuesListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate>
+@interface VenuesListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) NSArray *venues;
+
+- (void)reloadChangedImageForCellAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
