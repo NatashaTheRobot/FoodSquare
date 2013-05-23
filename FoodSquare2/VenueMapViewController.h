@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface VenueMapViewController : UIViewController
+@interface VenueMapViewController : UIViewController <MKMapViewDelegate>
 
 @property (strong, nonatomic) NSArray *venues;
 

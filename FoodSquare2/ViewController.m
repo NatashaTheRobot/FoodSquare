@@ -24,6 +24,7 @@
 
 - (void)getFoursquareVenuesWithLatitude:(CGFloat)latitude andLongitude:(CGFloat)longitude;
 - (void)getImagesForVenues;
+- (IBAction)mapListViewToggle:(id)sender;
 
 @end
 
@@ -109,7 +110,6 @@
                                                }
                                            }
 
-                                           [__activityIndicator stopAnimating];
                                            [self getImagesForVenues];
                                        }
                                    }];
@@ -142,7 +142,31 @@
                                           }
                                       }
                                   }
+                                  [__activityIndicator stopAnimating];
                               }];
+    }
+}
+
+- (IBAction)mapListViewToggle:(UIBarButtonItem *)barButton
+{
+    if ([barButton.title isEqualToString:@"List"]) {
+        [self transitionFromViewController:self.childViewControllers[0]
+                          toViewController:self.childViewControllers[1]
+                                  duration:0.7
+                                   options:UIViewAnimationOptionTransitionFlipFromLeft
+                                animations:nil
+                                completion:^(BOOL finished) {
+                                    barButton.title = @"Map";
+                                }];
+    } else {
+        [self transitionFromViewController:self.childViewControllers[1]
+                          toViewController:self.childViewControllers[0]
+                                  duration:0.7
+                                   options:UIViewAnimationOptionTransitionFlipFromRight
+                                animations:nil
+                                completion:^(BOOL finished) {
+                                    barButton.title = @"List";
+                                }];
     }
 }
 

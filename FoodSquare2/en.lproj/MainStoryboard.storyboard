@@ -56,7 +56,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FoodSquare" id="co3-I2-QAk">
-                        <barButtonItem key="rightBarButtonItem" title="Map" id="pZI-rA-Dp9"/>
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="pZI-rA-Dp9">
+                            <connections>
+                                <action selector="mapListViewToggle:" destination="c5R-Kb-oik" id="Ni5-35-VT0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="__activityIndicator" destination="Q7s-eT-OlF" id="Agd-f6-8fd"/>
@@ -275,6 +279,7 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="mapListViewToggle:"/>
                 <relationship kind="outlet" name="__activityIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="__mapViewContainer" candidateClass="UIView"/>
                 <relationship kind="outlet" name="__venueListContainer" candidateClass="UIView"/>
