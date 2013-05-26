@@ -67,7 +67,7 @@
                                    altitude:nil
                                 accuracyAlt:nil
                                       query:nil
-                                      limit:[NSNumber numberWithInt:50]
+                                      limit:[NSNumber numberWithInt:100]
                                  categoryId:@"4d4b7105d754a06374d81259"
                                      intent:0
                                      radius:[NSNumber numberWithInt:800]

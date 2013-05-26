@@ -91,6 +91,10 @@
     if (!annotationView) {
         if ([annotation isKindOfClass:[VenueAnnotation class]]) {
             annotationView = [[VenueAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:venueIdentifier];
+            CGRect  viewRect = CGRectMake(10, 10, 30, 30);
+            UIImageView* imageView = [[UIImageView alloc] initWithFrame:viewRect];
+            imageView.image = [UIImage imageNamed:@"foursquare-logo.jpg"];
+            annotationView.leftCalloutAccessoryView = imageView;
         } else {
             annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinIdentifier];
             ((MKPinAnnotationView *)annotationView).pinColor = MKPinAnnotationColorPurple;
