@@ -37,6 +37,8 @@
 		9CE5E81B174E7466004D25A8 /* VenueMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E81A174E7466004D25A8 /* VenueMapViewController.m */; };
 		9CE5E8641750E7EC004D25A8 /* navBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5E8631750E7EC004D25A8 /* navBar.png */; };
 		9CE5E8661750E812004D25A8 /* navBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5E8651750E812004D25A8 /* navBar@2x.png */; };
+		9CE5E8691752BF34004D25A8 /* VenueAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E8681752BF34004D25A8 /* VenueAnnotation.m */; };
+		9CE5E86C1752C439004D25A8 /* VenueAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E86B1752C439004D25A8 /* VenueAnnotationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +85,10 @@
 		9CE5E81A174E7466004D25A8 /* VenueMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueMapViewController.m; sourceTree = "<group>"; };
 		9CE5E8631750E7EC004D25A8 /* navBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBar.png; sourceTree = "<group>"; };
 		9CE5E8651750E812004D25A8 /* navBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navBar@2x.png"; sourceTree = "<group>"; };
+		9CE5E8671752BF33004D25A8 /* VenueAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueAnnotation.h; sourceTree = "<group>"; };
+		9CE5E8681752BF34004D25A8 /* VenueAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueAnnotation.m; sourceTree = "<group>"; };
+		9CE5E86A1752C438004D25A8 /* VenueAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueAnnotationView.h; sourceTree = "<group>"; };
+		9CE5E86B1752C439004D25A8 /* VenueAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueAnnotationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,10 @@
 				9CE5E811174E4B78004D25A8 /* VenueViewController.m */,
 				9C9BA5EF174D938800A300B8 /* Venue.h */,
 				9C9BA5F0174D938900A300B8 /* Venue.m */,
+				9CE5E8671752BF33004D25A8 /* VenueAnnotation.h */,
+				9CE5E8681752BF34004D25A8 /* VenueAnnotation.m */,
+				9CE5E86A1752C438004D25A8 /* VenueAnnotationView.h */,
+				9CE5E86B1752C439004D25A8 /* VenueAnnotationView.m */,
 				9C9BA5EB174D6A1000A300B8 /* Foursquare2 */,
 				9C9BA5B8174D695200A300B8 /* Supporting Files */,
 			);
@@ -276,6 +286,8 @@
 				9CE5E812174E4B78004D25A8 /* VenueViewController.m in Sources */,
 				9CE5E818174E6268004D25A8 /* ViewController.m in Sources */,
 				9CE5E81B174E7466004D25A8 /* VenueMapViewController.m in Sources */,
+				9CE5E8691752BF34004D25A8 /* VenueAnnotation.m in Sources */,
+				9CE5E86C1752C439004D25A8 /* VenueAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

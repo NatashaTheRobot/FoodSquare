@@ -21,4 +21,9 @@
     return self;
 }
 
+- (NSString *)subtitleText
+{
+    return [NSString stringWithFormat:@"%i checkins, %i here now", self.checkInCount, self.numberOfPeopleHereNow];
+}
+
 @end

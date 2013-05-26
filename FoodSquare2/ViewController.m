@@ -25,6 +25,9 @@
 - (void)getFoursquareVenuesWithLatitude:(CGFloat)latitude andLongitude:(CGFloat)longitude;
 - (IBAction)mapListViewToggle:(id)sender;
 
+- (void)getImagesForVenues;
+- (void)downloadImage:(NSURL *)url withIndex:(NSInteger)index;
+
 @end
 
 @implementation ViewController
@@ -87,8 +90,8 @@
                                                newVenue.city = [venue valueForKeyPath:@"location.city"];
                                                newVenue.state = [venue valueForKeyPath:@"location.state"];
                                                newVenue.zipCode = [[venue valueForKeyPath:@"location.postalCode"] intValue];
-                                               newVenue.latitude = [venue valueForKeyPath:@"location.lat"];
-                                               newVenue.longitude = [venue valueForKeyPath:@"location.lng"];
+                                               newVenue.latitude = [[venue valueForKeyPath:@"location.lat"] floatValue];
+                                               newVenue.longitude = [[venue valueForKeyPath:@"location.lng"] floatValue];
                                                newVenue.menuURL = [NSURL URLWithString:[venue valueForKeyPath:@"menu.mobileUrl"]];
                                                newVenue.reservationURL = [NSURL URLWithString:[venue valueForKeyPath:@"reservations.url"]];
                                                newVenue.checkInCount = [[venue valueForKeyPath:@"stats.checkinsCount"] intValue];

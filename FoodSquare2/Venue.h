@@ -16,8 +16,8 @@
 @property (strong, nonatomic) NSString *city;
 @property (strong, nonatomic) NSString *state;
 @property (assign, nonatomic) NSInteger zipCode;
-@property (strong, nonatomic) NSString *latitude;
-@property (strong, nonatomic) NSString *longitude;
+@property (assign, nonatomic) CGFloat latitude;
+@property (assign, nonatomic) CGFloat longitude;
 @property (strong, nonatomic) NSURL *menuURL;
 @property (strong, nonatomic) NSURL *reservationURL;
 @property (assign, nonatomic) NSInteger checkInCount;
@@ -25,5 +25,7 @@
 @property (strong, nonatomic) NSString *foursquareId;
 @property (strong, nonatomic) NSURL *imageURL;
 @property (strong, nonatomic) UIImage *image;
+
+- (NSString *)subtitleText;
 
 @end

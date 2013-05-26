@@ -61,7 +61,7 @@
     Venue *venue = ((Venue * )self.venues[indexPath.row]);
     
     cell.textLabel.text = venue.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%i checkins, %i here now", venue.checkInCount, venue.numberOfPeopleHereNow];
+    cell.detailTextLabel.text = [venue subtitleText];
     
     cell.imageView.image = venue.image;    
     cell.imageView.layer.cornerRadius = 7;
