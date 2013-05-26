@@ -23,7 +23,6 @@
 }
 
 - (void)getFoursquareVenuesWithLatitude:(CGFloat)latitude andLongitude:(CGFloat)longitude;
-- (void)getImagesForVenues;
 - (IBAction)mapListViewToggle:(id)sender;
 
 @end
@@ -34,6 +33,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self.navigationController.navigationBar
+            setBackgroundImage:[UIImage imageNamed:@"navBar.png"]
+            forBarMetrics:UIBarMetricsDefault];
     
     _locationMananger = [[CLLocationManager alloc] init];
     _locationMananger.delegate = self;
@@ -101,7 +104,7 @@
                                                
                                                return ([checkinCount1 compare:checkinCount2] == NSOrderedAscending);
                                            }];
-                                                                                      
+                                           
                                            for (UIViewController *viewController in self.childViewControllers) {
                                                if ([viewController isKindOfClass:[VenuesListViewController class]]) {
                                                    ((VenuesListViewController *)viewController).venues = _venuesSortedByCheckins;
@@ -109,11 +112,39 @@
                                                    ((VenueMapViewController*)viewController).venues = _venuesSortedByCheckins;
                                                }
                                            }
-
+                                           
+                                           [__activityIndicator stopAnimating];
                                            [self getImagesForVenues];
                                        }
                                    }];
     
+}
+
+#pragma mark - Image Requests
+- (void)downloadImage:(NSURL *)url withIndex:(NSInteger)index
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               if ( !error )
+                               {
+                                   UIImage *image = [[UIImage alloc] initWithData:data];
+                                   ((Venue *)_venuesSortedByCheckins[index]).image = image;
+                                   
+                                   for (UIViewController *viewController in self.childViewControllers) {
+                                       if ([viewController isKindOfClass:[VenuesListViewController class]]) {
+                                           NSIndexPath *venueCellIndexPath = [NSIndexPath indexPathForItem:index inSection:0];
+                                           [(VenuesListViewController *)viewController reloadChangedImageForCellAtIndexPath:venueCellIndexPath];
+                                       } else if ([viewController isKindOfClass:[VenueMapViewController class]]){
+                                           // TODO reload image in map view
+                                       }
+                                   }
+                                   
+                               } else {
+                                   NSLog(@"%@", error);
+                               }
+                           }];
 }
 
 - (void)getImagesForVenues
@@ -131,21 +162,13 @@
                                                                   [photoItem objectForKey:@"prefix"],
                                                                   imageSize,
                                                                   [photoItem objectForKey:@"suffix"]];
-                                      venue.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageURLString]]];
-                                      
-                                      for (UIViewController *viewController in self.childViewControllers) {
-                                          if ([viewController isKindOfClass:[VenuesListViewController class]]) {
-                                              NSIndexPath *venueCellIndexPath = [NSIndexPath indexPathForItem:i inSection:0];
-                                              [((VenuesListViewController *)viewController) reloadChangedImageForCellAtIndexPath:venueCellIndexPath];
-                                          } else if ([viewController isKindOfClass:[VenueMapViewController class]]){
-                                              // TODO.... Reload Map view!!
-                                          }
-                                      }
-                                  }
-                                  [__activityIndicator stopAnimating];
-                              }];
+                                      [self downloadImage:[NSURL URLWithString:imageURLString] withIndex:i];
+                                    }
+                            }];
     }
 }
+
+#pragma mark - Actions
 
 - (IBAction)mapListViewToggle:(UIBarButtonItem *)barButton
 {
@@ -175,6 +198,12 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *location = locations[0];
+        
+    for (UIViewController *viewController in self.childViewControllers) {
+        if ([viewController isKindOfClass:[VenueMapViewController class]]) {
+            ((VenueMapViewController *)viewController).location = location;
+        }
+    }
     
     [self getFoursquareVenuesWithLatitude:(CGFloat)location.coordinate.latitude
                              andLongitude:(CGFloat)location.coordinate.longitude];

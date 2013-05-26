@@ -62,9 +62,10 @@
     
     cell.textLabel.text = venue.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%i checkins, %i here now", venue.checkInCount, venue.numberOfPeopleHereNow];
+    
+    cell.imageView.image = venue.image;    
     cell.imageView.layer.cornerRadius = 7;
     cell.imageView.layer.masksToBounds = YES;
-    cell.imageView.image = venue.image;
     
     return cell;
 }
