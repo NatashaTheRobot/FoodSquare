@@ -32,22 +32,27 @@
 
 -(void)setLocation:(CLLocation *)location
 {
-////    __mapView.centerCoordinate = location;
-//    
-//    MKCoordinateSpan span;
-//    span.latitudeDelta=0.2;
-//    span.longitudeDelta=0.2;
-//    
-//    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(location.la, <#CLLocationDegrees longitude#>)
-//    
-//    MKCoordinateRegion region;
-//    region.span=span;
-//    region.center=location;
-//    
-//    [mapView setRegion:region animated:TRUE];
-//    [mapView regionThatFits:region];
-//    
-//    [self addPinToLocation:location];
+    MKCoordinateSpan span;
+    span.latitudeDelta = 0.2;
+    span.longitudeDelta = 0.2;
+    
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude);
+    
+    MKCoordinateRegion region;
+    region.span = span;
+    region.center=center;
+    
+    [__mapView setRegion:region animated:TRUE];
+    [__mapView regionThatFits:region];
+    
+    [self addPinToLocation:center];
+}
+
+- (void)addPinToLocation:(CLLocationCoordinate2D)location
+{
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    [annotation setCoordinate:location];
+    [__mapView addAnnotation:annotation];
 }
 
 - (void)setVenues:(NSArray *)venues
