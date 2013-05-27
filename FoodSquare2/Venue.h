@@ -23,7 +23,6 @@
 @property (assign, nonatomic) NSInteger checkInCount;
 @property (assign, nonatomic) NSInteger usersCount;
 @property (strong, nonatomic) NSString *foursquareId;
-@property (strong, nonatomic) NSURL *imageURL;
 @property (strong, nonatomic) UIImage *image;
 
 - (NSString *)subtitleText;

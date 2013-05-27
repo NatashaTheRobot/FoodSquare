@@ -132,15 +132,16 @@
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                                if ( !error )
                                {
+                                   Venue *venue = (Venue *)_venuesSortedByCheckins[index];
                                    UIImage *image = [[UIImage alloc] initWithData:data];
-                                   ((Venue *)_venuesSortedByCheckins[index]).image = image;
+                                   venue.image = image;
                                    
                                    for (UIViewController *viewController in self.childViewControllers) {
                                        if ([viewController isKindOfClass:[VenuesListViewController class]]) {
                                            NSIndexPath *venueCellIndexPath = [NSIndexPath indexPathForItem:index inSection:0];
                                            [(VenuesListViewController *)viewController reloadChangedImageForCellAtIndexPath:venueCellIndexPath];
                                        } else if ([viewController isKindOfClass:[VenueMapViewController class]]){
-                                           // TODO reload image in map view
+                                           [(VenueMapViewController *)viewController resetAnnotationAtIndex:index forVenue:venue];
                                        }
                                    }
                                    

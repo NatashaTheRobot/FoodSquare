@@ -59,20 +59,34 @@
 }
 
 - (void)setVenues:(NSArray *)venues
-{
-    NSMutableArray *annotations = [[NSMutableArray alloc] initWithCapacity:venues.count];
-    
+{    
     for (Venue *venue in venues) {
         
         VenueAnnotation *venueAnnotation = [[VenueAnnotation alloc] init];
         venueAnnotation.title = venue.name;
         venueAnnotation.subtitle = [venue subtitleText];
         venueAnnotation.coordinate = CLLocationCoordinate2DMake(venue.latitude, venue.longitude);
+        venueAnnotation.venue = venue;
         
-        [annotations addObject:venueAnnotation];
+        [__mapView addAnnotation:venueAnnotation];;
     }
+}
+
+- (void)resetAnnotationAtIndex:(NSInteger)index forVenue:(Venue *)venue
+{
+    // How to remove the matching annotation?!! Do I have to iterate over all the annotations every time?!!
     
-    [__mapView addAnnotations:annotations];
+    if ([__mapView.annotations[index] isKindOfClass:[VenueAnnotation class]]) {
+        
+        VenueAnnotation *newVenueAnnotation = [[VenueAnnotation alloc] init];
+        newVenueAnnotation.title = venue.name;
+        newVenueAnnotation.subtitle = [venue subtitleText];
+        newVenueAnnotation.coordinate = CLLocationCoordinate2DMake(venue.latitude, venue.longitude);
+        newVenueAnnotation.venue = venue;
+            
+        [__mapView addAnnotation:newVenueAnnotation];
+        
+    }
 }
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
@@ -91,9 +105,10 @@
     if (!annotationView) {
         if ([annotation isKindOfClass:[VenueAnnotation class]]) {
             annotationView = [[VenueAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:venueIdentifier];
+
             CGRect  viewRect = CGRectMake(10, 10, 30, 30);
             UIImageView* imageView = [[UIImageView alloc] initWithFrame:viewRect];
-            imageView.image = [UIImage imageNamed:@"foursquare-logo.jpg"];
+            imageView.image = ((VenueAnnotation *)annotation).venue.image;
             annotationView.leftCalloutAccessoryView = imageView;
         } else {
             annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinIdentifier];
