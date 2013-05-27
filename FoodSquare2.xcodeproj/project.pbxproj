@@ -39,6 +39,7 @@
 		9CE5E8661750E812004D25A8 /* navBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5E8651750E812004D25A8 /* navBar@2x.png */; };
 		9CE5E8691752BF34004D25A8 /* VenueAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E8681752BF34004D25A8 /* VenueAnnotation.m */; };
 		9CE5E86C1752C439004D25A8 /* VenueAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E86B1752C439004D25A8 /* VenueAnnotationView.m */; };
+		9CE5E86F175392D7004D25A8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E86E175392D6004D25A8 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,8 @@
 		9CE5E8681752BF34004D25A8 /* VenueAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueAnnotation.m; sourceTree = "<group>"; };
 		9CE5E86A1752C438004D25A8 /* VenueAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueAnnotationView.h; sourceTree = "<group>"; };
 		9CE5E86B1752C439004D25A8 /* VenueAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueAnnotationView.m; sourceTree = "<group>"; };
+		9CE5E86D175392D6004D25A8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		9CE5E86E175392D6004D25A8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				9CE5E8681752BF34004D25A8 /* VenueAnnotation.m */,
 				9CE5E86A1752C438004D25A8 /* VenueAnnotationView.h */,
 				9CE5E86B1752C439004D25A8 /* VenueAnnotationView.m */,
+				9CE5E86D175392D6004D25A8 /* WebViewController.h */,
+				9CE5E86E175392D6004D25A8 /* WebViewController.m */,
 				9C9BA5EB174D6A1000A300B8 /* Foursquare2 */,
 				9C9BA5B8174D695200A300B8 /* Supporting Files */,
 			);
@@ -288,6 +293,7 @@
 				9CE5E81B174E7466004D25A8 /* VenueMapViewController.m in Sources */,
 				9CE5E8691752BF34004D25A8 /* VenueAnnotation.m in Sources */,
 				9CE5E86C1752C439004D25A8 /* VenueAnnotationView.m in Sources */,
+				9CE5E86F175392D7004D25A8 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

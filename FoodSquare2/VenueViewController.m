@@ -7,6 +7,7 @@
 //
 
 #import "VenueViewController.h"
+#import "WebViewController.h"
 
 @interface VenueViewController ()
 {
@@ -48,11 +49,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)showMenuWithButton:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([segue.identifier isEqualToString:@"menu"]) {
+        ((WebViewController *)segue.destinationViewController).url = self.venue.menuURL;
+    } else {
+        ((WebViewController *)segue.destinationViewController).url = self.venue.reservationURL;
+    }
+    
 }
 
-- (IBAction)reserveWithButton:(id)sender
-{
-}
 @end

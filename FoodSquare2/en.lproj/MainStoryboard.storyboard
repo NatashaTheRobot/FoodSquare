@@ -109,7 +109,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="showMenuWithButton:" destination="OMS-lf-3lO" eventType="touchUpInside" id="Ebs-cJ-SEB"/>
+                                    <segue destination="gGg-8e-qFI" kind="push" identifier="menu" id="xiA-Tk-2Ua"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqg-9E-kD8">
@@ -122,7 +122,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="reserveWithButton:" destination="OMS-lf-3lO" eventType="touchUpInside" id="KNG-hH-ijE"/>
+                                    <segue destination="gGg-8e-qFI" kind="push" identifier="reserve" id="czh-5A-CCm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -152,6 +152,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHL-Ll-pMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="480" y="-100"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="iQj-di-9GD">
+            <objects>
+                <viewController id="gGg-8e-qFI" customClass="WebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Bq-AX-0Rt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YRG-Ib-pPm">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gGg-8e-qFI" id="sWS-RC-qL0"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YRG-Ib-pPm" firstAttribute="bottom" secondItem="5Bq-AX-0Rt" secondAttribute="bottom" type="default" id="473-3D-Paj"/>
+                            <constraint firstItem="YRG-Ib-pPm" firstAttribute="trailing" secondItem="5Bq-AX-0Rt" secondAttribute="trailing" type="default" id="XGC-xo-LxY"/>
+                            <constraint firstItem="YRG-Ib-pPm" firstAttribute="top" secondItem="5Bq-AX-0Rt" secondAttribute="top" type="default" id="j6A-DX-S14"/>
+                            <constraint firstItem="YRG-Ib-pPm" firstAttribute="leading" secondItem="5Bq-AX-0Rt" secondAttribute="leading" type="default" id="mGZ-Wf-6ev"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Bb-jk-Cih"/>
+                    <connections>
+                        <outlet property="_webView" destination="YRG-Ib-pPm" id="cET-RR-bSz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRu-4y-J47" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="-100"/>
         </scene>
         <!--Venues List View Controller-->
         <scene sceneID="MMJ-f8-lPE">
@@ -285,6 +317,12 @@
                 <relationship kind="outlet" name="__venueListContainer" candidateClass="UIView"/>
             </relationships>
         </class>
+        <class className="WebViewController" superclassName="ViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="_webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -293,5 +331,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="kpI-0j-xEc"/>
+        <segue reference="czh-5A-CCm"/>
     </inferredMetricsTieBreakers>
 </document>
