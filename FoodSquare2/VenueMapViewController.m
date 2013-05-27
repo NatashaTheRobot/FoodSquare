@@ -7,9 +7,9 @@
 //
 
 #import "VenueMapViewController.h"
-#import "Venue.h"
 #import "VenueAnnotation.h"
 #import "VenueAnnotationView.h"
+#import "VenueViewController.h"
 
 @interface VenueMapViewController ()
 {
@@ -125,9 +125,15 @@
     return annotationView;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    VenueAnnotation *venueAnnotation = [__mapView selectedAnnotations][0];
+    ((VenueViewController *)segue.destinationViewController).venue = venueAnnotation.venue;
+}
+
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    NSLog(@"%@", view.annotation.title);
+    [self performSegueWithIdentifier:@"mapToVenue" sender:self];
 }
 
 @end

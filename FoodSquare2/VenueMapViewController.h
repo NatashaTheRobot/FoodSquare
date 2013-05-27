@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-@class Venue;
+#import "Venue.h"
 
 @interface VenueMapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
