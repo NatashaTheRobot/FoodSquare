@@ -16,9 +16,6 @@
     __weak IBOutlet UILabel *__checkinsLabel;
 }
 
-- (IBAction)showMenuWithButton:(id)sender;
-- (IBAction)reserveWithButton:(id)sender;
-
 @end
 
 @implementation VenueViewController
@@ -41,12 +38,32 @@
     __addressLabel.text = [NSString stringWithFormat:@"%@, %@, %@ %d", self.venue.address, self.venue.city, self.venue.state, self.venue.zipCode];
     __checkinsLabel.text = [NSString stringWithFormat:@"%i checkins, %i here now", self.venue.checkInCount, self.venue.numberOfPeopleHereNow];
     self.navigationItem.title = self.venue.name;
+
+    [self disableWebButtonsIfNoURL];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)disableWebButtonsIfNoURL
+{
+    for (UIView *subview in self.view.subviews) {
+        if ([subview isKindOfClass:[UIButton class]]) {
+            if ([((UIButton *)subview).currentTitle isEqualToString:@"Menu"]) {
+                if (!self.venue.menuURL) {
+                    ((UIButton *)subview).enabled = NO;
+                }
+            } else if ([((UIButton *)subview).currentTitle isEqualToString:@"Reserve"]) {
+                if (!self.venue.reservationURL) {
+                    ((UIButton *)subview).enabled = NO;
+                }
+            }
+                
+        }
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

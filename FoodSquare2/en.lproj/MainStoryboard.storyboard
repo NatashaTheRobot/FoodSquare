@@ -99,11 +99,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7O-VW-Tbj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7O-VW-Tbj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="XEd-wc-5gW"/>
+                                    <constraint firstAttribute="height" constant="44" id="u3g-qh-oXv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Menu">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Menu" backgroundImage="green-button.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled" backgroundImage="grey-button.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -113,10 +120,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqg-9E-kD8">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dcO-ay-yBh"/>
+                                    <constraint firstAttribute="width" constant="83" id="oV0-MD-4GF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Reserve">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Reserve" backgroundImage="green-button.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled" backgroundImage="grey-button.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,12 +147,12 @@
                             <constraint firstAttribute="trailing" secondItem="lqg-9E-kD8" secondAttribute="trailing" constant="69" id="CVH-6M-bmu"/>
                             <constraint firstItem="42I-g6-9kw" firstAttribute="leading" secondItem="rfI-EV-m9K" secondAttribute="leading" type="default" id="D8d-0l-5LL"/>
                             <constraint firstItem="42I-g6-9kw" firstAttribute="trailing" secondItem="rfI-EV-m9K" secondAttribute="trailing" type="default" id="LgL-X0-W5m"/>
+                            <constraint firstAttribute="bottom" secondItem="S7O-VW-Tbj" secondAttribute="bottom" constant="162" id="N6m-VC-PaS"/>
                             <constraint firstItem="3L1-gn-Tdy" firstAttribute="leading" secondItem="1mg-jI-hDs" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PgM-YH-QtZ"/>
                             <constraint firstItem="3L1-gn-Tdy" firstAttribute="trailing" secondItem="1mg-jI-hDs" secondAttribute="trailing" type="default" id="b1Q-no-S6t"/>
-                            <constraint firstAttribute="bottom" secondItem="lqg-9E-kD8" secondAttribute="bottom" constant="162" id="fnB-TA-8PY"/>
-                            <constraint firstItem="S7O-VW-Tbj" firstAttribute="baseline" secondItem="lqg-9E-kD8" secondAttribute="baseline" type="default" id="gPT-0U-oEe"/>
                             <constraint firstItem="S7O-VW-Tbj" firstAttribute="leading" secondItem="1mg-jI-hDs" secondAttribute="leading" constant="66" id="gX1-Bh-4gn"/>
                             <constraint firstAttribute="bottom" secondItem="3L1-gn-Tdy" secondAttribute="bottom" constant="98" id="nRd-b1-jrw"/>
+                            <constraint firstAttribute="bottom" secondItem="lqg-9E-kD8" secondAttribute="bottom" constant="161" id="u4K-d9-ErM"/>
                             <constraint firstItem="42I-g6-9kw" firstAttribute="top" secondItem="1mg-jI-hDs" secondAttribute="top" constant="9" id="wpp-3y-ENB"/>
                         </constraints>
                     </view>
@@ -281,6 +295,8 @@
     </scenes>
     <resources>
         <image name="foursquare-logo.jpg" width="512" height="512"/>
+        <image name="green-button.png" width="602" height="86"/>
+        <image name="grey-button.png" width="602" height="86"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
@@ -295,8 +311,6 @@
         <class className="VenueViewController" superclassName="VenuesListViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VenueViewController.h"/>
             <relationships>
-                <relationship kind="action" name="reserveWithButton:"/>
-                <relationship kind="action" name="showMenuWithButton:"/>
                 <relationship kind="outlet" name="__addressLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="__checkinsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="__imageView" candidateClass="UIImageView"/>

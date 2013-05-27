@@ -40,6 +40,8 @@
 		9CE5E8691752BF34004D25A8 /* VenueAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E8681752BF34004D25A8 /* VenueAnnotation.m */; };
 		9CE5E86C1752C439004D25A8 /* VenueAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E86B1752C439004D25A8 /* VenueAnnotationView.m */; };
 		9CE5E86F175392D7004D25A8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E86E175392D6004D25A8 /* WebViewController.m */; };
+		9CE5E87317539B47004D25A8 /* grey-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5E87217539B47004D25A8 /* grey-button.png */; };
+		9CE5E87517539B63004D25A8 /* green-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5E87417539B63004D25A8 /* green-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		9CE5E86B1752C439004D25A8 /* VenueAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueAnnotationView.m; sourceTree = "<group>"; };
 		9CE5E86D175392D6004D25A8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		9CE5E86E175392D6004D25A8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		9CE5E87217539B47004D25A8 /* grey-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-button.png"; sourceTree = "<group>"; };
+		9CE5E87417539B63004D25A8 /* green-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,8 @@
 		9C9BA5B8174D695200A300B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9CE5E87417539B63004D25A8 /* green-button.png */,
+				9CE5E87217539B47004D25A8 /* grey-button.png */,
 				9CE5E80C174E4156004D25A8 /* foursquare-logo.jpg */,
 				9CE5E8651750E812004D25A8 /* navBar@2x.png */,
 				9CE5E8631750E7EC004D25A8 /* navBar.png */,
@@ -270,6 +276,8 @@
 				9CE5E80D174E4156004D25A8 /* foursquare-logo.jpg in Resources */,
 				9CE5E8641750E7EC004D25A8 /* navBar.png in Resources */,
 				9CE5E8661750E812004D25A8 /* navBar@2x.png in Resources */,
+				9CE5E87317539B47004D25A8 /* grey-button.png in Resources */,
+				9CE5E87517539B63004D25A8 /* green-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
